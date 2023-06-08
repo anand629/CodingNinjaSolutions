@@ -1,0 +1,25 @@
+
+public class Solution{  
+    
+    public static int duplicateNumber(int arr[]) {
+        int count=0;
+        int x=0;
+        for(int i=0;i<arr.length-1;i++){
+        	count=0;
+            for(int j=i+1;j<arr.length;j++){
+                if(arr[i]==arr[j]){
+                    count++;
+                    x= arr[i];
+                    break;
+                    //return x;
+                }
+            }
+            if(count==1){
+                break;
+            }
+            
+        }
+        return x;
+    	//Your code goes here
+    }
+}
